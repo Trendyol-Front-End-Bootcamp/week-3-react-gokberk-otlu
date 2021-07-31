@@ -12,7 +12,7 @@ const CharList = ({ characters }) => {
     const listCharacters =  (characters) => {
         return (
             characters.map(character => (
-                <Link to={`/characters/${character.id}`} className="character-preview" key={character.id}>
+                <Link to={`/characters/${character.id}`} className="character-preview" key={character.id} data-testid="character-item-test">
                     <div className="character-image">
                         <img src={character.image} alt={character.name} />
                     </div>
