@@ -15,17 +15,15 @@ describe("Search", () => {
         expect(inputElement).toBeInTheDocument();
     })
 
-    // it('should be able to type into input', () => {
-    //     render(
-    //         <Search 
-    //             searchName={''}
-    //             fetchWithSearchName={mockedFetchWithSearchName}
-    //         />
-    //     );
-    //     const inputElement = screen.getByPlaceholderText(/Search Name/i);
-    //     fireEvent.click(inputElement);
-    //     fireEvent.change(inputElement, { target: { value: "Deneme" } });
-    //     screen.debug();
-    //     expect(inputElement.value).toBe("Deneme");
-    // });
+    it('should have the value of searchName as its input value', async () => {
+        render(
+            <Search 
+                searchName={'Test Search Area'}
+                fetchWithSearchName={mockedFetchWithSearchName}
+            />
+        );
+        const inputElement = screen.getByPlaceholderText(/Search Name/i);
+        screen.debug();
+        expect(inputElement.value).toBe("Test Search Area");
+    });
 })
