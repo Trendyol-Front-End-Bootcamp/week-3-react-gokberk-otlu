@@ -23,7 +23,6 @@ describe("Search", () => {
             />
         );
         const inputElement = screen.getByPlaceholderText(/Search Name/i);
-        screen.debug();
         expect(inputElement.value).toBe("Test Search Area");
     });
 })

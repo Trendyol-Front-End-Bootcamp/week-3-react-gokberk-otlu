@@ -32,7 +32,7 @@ beforeEach(() => {
 });
 
 describe("Episodes", () => {
-    it('should', async () => {
+    it('should has fetch return', async () => {
         render(
             <Episodes />
         );
