@@ -8,8 +8,8 @@ const mockFetchedData = {
     error: null
 }
 
-describe("Episodes", () => {
-    it('should', async () => {
+describe("useFetch", () => {
+    it('should have fetch data from api and watch on rendered jsx', async () => {
         fetchMock
         .get('http://example.com/users', mockFetchedData);
         render(<UseFetchExample url={"http://example.com/users"} />)
